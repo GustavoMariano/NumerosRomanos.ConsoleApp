@@ -1,14 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NumerosRomanos;
-using System;
 
-namespace NumerosRomanosTeste
+namespace ParaNumerosRomanos
 {
     [TestClass]
-    public class NumerosRomanosTestes
+    public class ConverterParaNumerosRomanosTestes
     {
         Conversor numeros;
-        public NumerosRomanosTestes() 
+        public ConverterParaNumerosRomanosTestes() 
         {
             numeros = new Conversor();
         }

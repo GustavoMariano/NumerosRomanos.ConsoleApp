@@ -49,7 +49,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NumerosRomanosTestes.cs" />
+    <Compile Include="ConverterParaNumerosNat.cs" />
+    <Compile Include="ConverterParaNumerosRomanosTestes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

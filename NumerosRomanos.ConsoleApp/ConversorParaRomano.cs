@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace NumerosRomanos
 {
     public class Conversor
@@ -50,10 +45,28 @@ namespace NumerosRomanos
             return resultado;
         }
 
+        public int ConverterParaNat(string romano)
+        {
+            int resultado = 0;
+            NumerosIndoArabico numeros = new NumerosIndoArabico();
+            foreach (char letras in romano)
+            {                
+                resultado += numeros.ConverterParaNumero(letras);
+            }
+
+            if (romano.Contains("IV") || romano.Contains("IV"))
+                resultado -= 1;
+            if(roman)
+
+            return resultado;
+        }
+
+        #region Métodos privados
         private static string ConverteParaRomano(string resultado, NumerosIndoArabico indoArabico, int dezena)
         {
             resultado += indoArabico.NumerosEmRomanos(dezena);
             return resultado;
         }
+        #endregion
     }
 }
