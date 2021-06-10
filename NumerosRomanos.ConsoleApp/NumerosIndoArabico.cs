@@ -74,7 +74,13 @@ namespace NumerosRomanos
                 case 'C': return 100;
                 case 'D': return 500;
                 case 'M': return 1000;
-                //case 'V̄': return 5000;
+                case 'r': return 4000;
+                case 's': return 5000;
+                case 't': return 6000;
+                case 'u': return 7000;
+                case 'w': return 8000;
+                case 'y': return 9000;
+                case 'z': return 10000;
                 default: return 0;
             }
         }

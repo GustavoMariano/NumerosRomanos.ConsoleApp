@@ -33,7 +33,7 @@ namespace NumerosRomanos
             else
                 return "Valor inválido, tente novamente!! (valores entre 0 e 10000)";
 
-            if(milhar >= 4000)
+            if (milhar >= 4000)
                 resultado += indoArabico.NumerosEmRomanosMaiorQueQuatroMil(milhar);
             else
                 resultado = ConverteParaRomano(resultado, indoArabico, milhar);
@@ -47,16 +47,30 @@ namespace NumerosRomanos
 
         public int ConverterParaNat(string romano)
         {
-            int resultado = 0;
             NumerosIndoArabico numeros = new NumerosIndoArabico();
+            int resultado = 0;
+            romano = romano.Replace("V̄ĪĪĪ", "w");
+            romano = romano.Replace("V̄ĪĪ", "u");
+            romano = romano.Replace("ĪV̄", "r");
+            romano = romano.Replace("V̄Ī", "t");
+            romano = romano.Replace("V̄", "s");
+            romano = romano.Replace("ĪX̄", "y");
+            romano = romano.Replace("X̄", "z");
+
+
             foreach (char letras in romano)
-            {                
+            {
                 resultado += numeros.ConverterParaNumero(letras);
             }
 
-            if (romano.Contains("IV") || romano.Contains("IV"))
-                resultado -= 1;
-            if(roman)
+            if (romano.Contains("IV") || romano.Contains("IX"))
+                resultado -= 2;
+
+            if (romano.Contains("XC") || romano.Contains("XL"))
+                resultado -= 20;
+
+            if (romano.Contains("CM") || romano.Contains("CD"))
+                resultado -= 200;
 
             return resultado;
         }

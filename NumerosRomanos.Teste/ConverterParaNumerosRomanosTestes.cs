@@ -7,7 +7,7 @@ namespace ParaNumerosRomanos
     public class ConverterParaNumerosRomanosTestes
     {
         Conversor numeros;
-        public ConverterParaNumerosRomanosTestes() 
+        public ConverterParaNumerosRomanosTestes()
         {
             numeros = new Conversor();
         }
@@ -20,7 +20,7 @@ namespace ParaNumerosRomanos
 
         [TestMethod]
         public void DeveRetornarI()
-        {            
+        {
             Assert.AreEqual("I", numeros.ConverterParaRomano(1));
         }
 
